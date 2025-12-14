@@ -105,8 +105,7 @@ VALUES (
     'Confirmada'
 );
 
--- 1. Actualiza ESTADO a 'Completada' (para que funcione la Consulta 1)
---    y establece una duración de 2 horas.
+-- Actualizamos ESTADO a 'Completada' (para que funcione la Consulta 1) y establecemos una duración de 2 horas.
 UPDATE Cita
 SET
     estado = 'Completada',
@@ -114,7 +113,7 @@ SET
 WHERE
     cita_id = 1;
 
--- 2. Actualiza la duración de la Cita 2 para que sea 1.25 horas (75 minutos).
+-- Actualizamos la duración de la Cita 2 para que sea 1.25 horas (75 minutos).
 UPDATE Cita
 SET
     fecha_hora_fin = '2025-12-10 12:15:00'
