@@ -37,7 +37,7 @@ CREATE TABLE Detalle_Pedido (
     pedido_id INT REFERENCES Pedido(pedido_id) ON DELETE CASCADE NOT NULL,
     producto_id INT REFERENCES Producto(producto_id) NOT NULL,
     cantidad INT NOT NULL CHECK (cantidad > 0),
-    -- Almacena el precio al momento de la compra (CRUCIAL para facturación histórica)
+    -- Almacena el precio al momento de la compra (esto es crucial para la facturación histórica)
     precio_unitario NUMERIC(10, 2) NOT NULL CHECK (precio_unitario > 0),
 
     UNIQUE (pedido_id, producto_id)
