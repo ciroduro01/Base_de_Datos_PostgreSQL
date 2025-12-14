@@ -16,7 +16,7 @@ GROUP BY
 ORDER BY
     Total_Lunas DESC, G.nombre, E.nombre;
 --Consulta 2: Identificación de Planetas Habitables
---Esta consulta demuestra el uso de filtros lógicos (WHERE) en atributos de la base de datos, lo cual es la base para proyectos de análisis de datos como el que sugerimos.
+--Esta consulta demuestra el uso de filtros lógicos (WHERE) en atributos de la base de datos, lo cual es la base para proyectos de análisis de datos como el presente.
 SELECT
     G.nombre AS Galaxia,
     E.nombre AS Estrella,
