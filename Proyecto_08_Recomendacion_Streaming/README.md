@@ -45,7 +45,7 @@ El dashboard contiene los tres gráficos clave para el monitoreo del sistema:
 * **Gráfico N°1:** **Top Contenido: Calificación Promedio y Total de Votos** (Gráfico de Barras Horizontal)
     ![Gráfico de Barras del Contenido Top (Calificación Promedio)](assets/Proyecto8_Top_Contenido.png)
 
-* **Gráfico N°2:** **Análisis de Preferencias: Distribución por Género de [Usuario Específico]** (Gráfico de Anillo/Tarta)
+* **Gráfico N°2:** **Análisis de Preferencias: Distribución por Género del Usuario Específico** (Gráfico de Anillo/Tarta)
     ![Gráfico de Anillo del Análisis de Preferencias por Género (Usuario Específico)](assets/Proyecto8_Preferencias_Genero.png)
 
 * **Gráfico N°3:** **Actividad Histórica de Visualizaciones por Mes** (Tabla)
