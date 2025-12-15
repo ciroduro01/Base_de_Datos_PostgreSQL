@@ -74,3 +74,80 @@ El desarrollo del proyecto siguió un flujo de trabajo estructurado en las sigui
 El modelo de Gestión Académica es un esquema relacional probado que permite la administración precisa de la información de rendimiento. El proyecto demuestra la capacidad de transformar datos de calificaciones en métricas accionables (rankings) que son vitales para la toma de decisiones administrativas y el seguimiento individual del progreso del estudiante.
 
 ---
+
+# Project 7: Database Modeling - Academic Management
+
+## 1. Objective and Project Overview
+
+This project aims to design and model a relational database to manage the academic information of an educational institution, including students, professors, courses, and grade history.
+
+**Summary**: A relational schema was implemented using the `Inscripción` (*Enrollment*) link table to model the Many-to-Many (N:M) relationship between `Estudiante` and `Curso`. Key analytical SQL queries were developed to calculate the average performance per course and the overall average per student, which were visualized in a Power BI dashboard.
+
+---
+
+## 2. Technologies and Tools Used
+
+| Category | Tool | Specific Use |
+| :--- | :--- | :--- |
+| **Databases** | PostgreSQL | Storage, DDL, DML, and SQL execution. |
+| **Modeling** | DBeaver | Design and generation of the Entity-Relationship Diagram (ERD). |
+| **Analysis** | SQL (AVG, GROUP BY, N:M JOINs) | Development of academic performance queries. |
+| **Visualization** | Power BI | Creation of the Course and Student Ranking Dashboard. |
+
+---
+
+## 3. Key Results and Visualizations
+
+### A. Data Model Design (ERD)
+
+The relational schema uses a central link table (`Inscripción`) that connects the `Estudiante` entity with the `Curso` entity. This link table stores grades and final status, which is key for all performance analyses.
+
+![Academic Management Model ERD Diagram](assets/Proyecto7_ERD.png)
+
+### B. Key Analytical Queries
+
+The project focused on performance metrics at both the course and student levels:
+
+1. **Performance by Course**: Using the `AVG` and `GROUP BY` aggregation functions on the `Inscripción` table to determine the historical performance of each subject and professor.
+2. **Overall Average by Student**: Using `AVG` and `GROUP BY` to calculate the most important individual performance metric, allowing for a ranking of top students.
+3. **Individual History**: A query demonstrating the model's ability to generate an accurate **Gradebook**, using a `VIEW` or `JOINs` to obtain the details of all grades for a specific student.
+
+### C. Power BI Dashboard
+
+A dashboard was created to visualize academic results:
+
+* **Visualization 1**: Course Ranking: Historical Performance (Average Grade) (Bar Chart).
+    ![Course Ranking: Historical Performance chart](assets/Proyecto7_Nota_Promedio.png)
+
+* **Visualization 2**: Student Ranking: Cumulative GPA (Donut Chart).
+    ![Student Ranking: Cumulative GPA chart](assets/Proyecto7_Promedio_General.png)
+
+* **Visualization 3**: Detailed Academic History (Grade Book) (Table).
+
+    ![Gradebook Table](assets/Proyecto7_Libreta_Calificaciones.png)
+
+---
+
+## 4. Work Methodology
+
+The project development followed a structured workflow in the following phases:
+
+1. **Phase 1: Modeling and DDL/DML**: Creation of the N:M relational schema, focusing on the `Inscripción` table to capture the grade, status, and semester, ensuring referential integrity.
+2. **Phase 2: Analytical Queries (Advanced SQL)**: Development of key queries, using aggregation functions (`AVG`, `COUNT`) and the `GROUP BY` clause to generate statistical reports at different levels (course and individual).
+3. **Phase 3: BI Analysis**: Connecting Power BI to the three key queries and visualizing the metrics. A dashboard design was prioritized that provides both a high-level view (rankings) and transactional detail (gradebook).
+
+---
+
+## 5. Repository and File Structure
+
+* **`Proyecto N°7 - Base de Datos de Gestión Académica.sql`**: Contains the `CREATE DATABASE` statement, the DDL (tables), and the DML (test data insertion).
+* **`Consultas_Clave_Proyecto7.sql`**: Contains the three key analytical queries (Average by Course, Average by Student, Individual History).
+* **`README.md`**: Project documentation.
+* **`assets/`**: Folder containing the Entity-Relationship Diagram (ERD) and Power BI chart screenshots.
+
+---
+
+## 6. Conclusions
+The Academic Management model is a proven relational schema that allows for the accurate management of performance information. The project demonstrates the ability to transform grade data into actionable metrics (rankings) that are vital for administrative decision-making and individual student progress tracking.
+
+---
