@@ -55,3 +55,63 @@ Si deseas ejecutar cualquiera de los proyectos, sigue estos pasos:
 ## Licencia
 
 Este trabajo se comparte bajo la **[Licencia MIT](LICENSE)**, lo que permite su uso y modificación con fines de estudio o portafolio, **siempre y cuando se cite al autor original**.
+
+---
+
+# 8 Database Modeling Projects with PostgreSQL
+
+## Repository Overview
+
+This is a collection of **8 comprehensive database projects** designed in **PostgreSQL**, demonstrating the ability to progress from simple (1:N) data modeling to complex (N:M) schemas geared towards **Business Analysis (BI)**.
+
+Each project includes **DDL**, **DML**, **Key Analytical Queries**, and `README.md` documentation, simulating real-world business environments.
+
+## Skills Progression and Levels
+
+The projects are categorized to show a clear **learning progression** in schema design and SQL complexity:
+
+### Basic Level: Fundamentals and 1:N Relationships
+
+| Projects | Focus |
+| :--- | :--- |
+| **P. 1** | First contact with `CREATE TABLE` and `JOINs`(Celestial Bodies). |
+| **P. 3** | Modeling time constraints and using `CHECK` (Appointment Scheduler). |
+
+### Intermediate Level: N:M Tables and Business Logic
+
+| Projects | Focus |
+| :--- | :--- |
+| **P. 4** | Date and Reservation Logic Management (Travel Agency). |
+| **P. 5** | **Complex N:M Relationships** and Conditional Aggregations (`CASE WHEN`) (World Cup). |
+| **P. 6** | Transaction/Billing Model (E-Commerce). |
+
+### Advanced Level: Data Analysis (BI) and High Performance
+
+| Projects | Focus |
+| :--- | :--- |
+| **P. 7** | Academic Management Scheme with Performance Calculations (`AVG` with `GROUP BY`). |
+| **P. 8** | Recommendation System Model (Affinity and Popularity), key for analysis in Power BI. |
+
+---
+
+## How to Use This Repository
+
+If you want to run any of the projects, follow these steps:
+
+1. **Clone the Repository:**
+    ```bash
+    git clone https://github.com/ciroduro01/Base_de_Datos_PostgreSQL.git
+    ```
+
+2. **Database Setup**:
+* Make sure you have a PostgreSQL server running locally.
+* Run the main SQL file (`Proyecto N°X - Base de Datos... .sql`) from the desired folder in your SQL client (DBeaver, pgAdmin, etc.).
+
+3. **Explore the Queries**:
+
+* Each folder contains a file, `Consultas_Clave_ProyectoX.sql`, with the business-value analytical code to be connected to Business Intelligence tools.
+
+---
+
+## License
+This work is shared under the MIT License, which permits its use and modification for study or portfolio purposes, provided that the original author is cited.
