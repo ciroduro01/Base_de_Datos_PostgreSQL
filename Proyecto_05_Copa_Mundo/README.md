@@ -37,7 +37,7 @@ Se generó un dashboard para visualizar los resultados analíticos:
 
 * **Gráfico N°1:** **Ranking de Rendimiento Ofensivo: Total de Goles Anotados por País** (Gráfico de Barras).
     ![Gráfico de Barras del Ranking de Goles anotados por País](assets/Proyecto5_Goles_Pais.png)
-* **Gráfico N°2:** **Resultados Detallados por Partido (Victoria/Derrota/Empate)** (Tabla o Matriz).
+* **Gráfico N°2:** **Resultados Detallados por Partido (Victoria/Derrota/Empate)** (Tabla).
     ![Tabla de Resultado de Partido](assets/Proyecto5_Resultados_Partido.png)
 * **Gráfico N°3:** **Total General de Goles Anotados en el Torneo** (Tarjeta).
     ![Tarjeta con Total de Goles anotados en el Torneo](assets/Proyecto5_Goles_Torneo.png)
@@ -68,3 +68,72 @@ El desarrollo del proyecto siguió un flujo de trabajo estructurado en las sigui
 El modelo de datos de la Copa del Mundo prueba la habilidad de trabajar con relaciones complejas (N:M) y la lógica de negocio condicional directamente en SQL. Las consultas y visualizaciones permiten un **análisis de rendimiento** preciso y la categorización automática de resultados, ofreciendo información valiosa y en tiempo real sobre el progreso del torneo.
 
 ---
+
+# Project 5: Database Modeling - World Cup
+
+## 1. Objective and Project Overview
+
+This project aims to design and model an advanced relational database to manage information for a football tournament (World Cup). The focus is on handling the Many-to-Many (M:M) relationship between countries and matches, and on developing conditional logic for results analysis.
+
+**Summary**: A relational schema was implemented with a link table (`Equipo_Partido`) to connect countries and matches. SQL queries with CASE WHEN statements were developed to calculate performance metrics and determine the result of each match, which were then visualized in a Power BI dashboard.
+
+---
+
+## 2. Technologies and Tools Used
+
+| Category | Tool | Specific Use |
+| :--- | :--- | :--- |
+| **Databases** | PostgreSQL | Storage, DDL, DML, and SQL execution. |
+| **Modeling** | DBeaver | Entity-Relationship Diagram (ERD) design. |
+| **Analysis** | SQL (N:M JOINs, CASE WHEN, SUM, GROUP BY) | Development of performance queries and conditional results. |
+| **Visualization** | Power BI | Creation of the Goal Ranking and Detailed Results Dashboard. |
+
+---
+
+## 3. Key Results and Visualizations
+
+### A. Data Model Design (ERD)
+The schema is based on a Many-to-Many (N:M) relationship between the `País` and `Partido` tables, resolved using the `Equipo_Partido` link table. This table includes the `es_local` field to record each team's role, which is vital for the analysis.
+
+![World Cup Model ERD diagram](assets/Proyecto5_ERD.png)
+
+### B. Key Analytical Queries
+The project focused on two main analytical metrics that demonstrate the handling of complex logic:
+
+1. **Goal Ranking**: Use of `CASE WHEN` within an aggregated `SUM` function to calculate the total goals scored by each country, taking the correct value of `goles_local` or `goles_visitante` as appropriate.
+2. **Results Logic**: Use of `CASE WHEN` outside of an aggregate function to transform the numerical goal difference into a business-oriented textual category: "HOME WIN" (*victoria local*), "HOME LOSS" (*derrota local*), or "DRAW" (*empate*).
+
+### C. Power BI Dashboard
+A dashboard was generated to visualize the analytical results:
+
+* **Visualization 1**: Offensive Performance Ranking: Total Goals Scored by Country (Bar Chart).
+    ![Total Goals Scored by Country chart](assets/Proyecto5_Goles_Pais.png)
+
+* **Visualization 2**: Detailed Results by Match (Win/Loss/Draw) (Table).
+    ![Detailed Results by Match table](assets/Proyecto5_Resultados_Partido.png)
+
+* **Visualization 3**: Total Goals Scored in the Tournament (Card).
+    ![Total Goals Scored card](assets/Proyecto5_Goles_Torneo.png)
+
+---
+
+## 4. Work Methodology
+The project development followed a structured workflow in the following phases:
+
+1. **Phase 1: Modeling and DDL/DML**: Creation of the N:M relational schema and data loading. Emphasis was placed on the correct insertion of data into the `Equipo_Partido` table to accurately reflect which country played as the home team (`es_local = TRUE`) or away team.
+2. **Phase 2: Analytical Queries (Advanced SQL)**: Development of key queries, using multiple `JOINs` to navigate the N:M relationship and advanced implementation of the `CASE WHEN` statement to generate performance metrics and categorical results.
+3. **Phase 3: BI Analysis**: Connection of Power BI to the key queries and visualization of the metrics. A bar chart was used for the ranking and a table for verifying the conditional logic of the results.
+
+---
+
+## 5. Repository Structure and Files
+
+* **`Proyecto N°5 - Base de Datos de la Copa del Mundo.sql`**: Contains the `CREATE DATABASE` statement, the DDL (tables), and the DML (test data insertion).
+* **`Consultas_Clave_Proyecto5.sql`**: Contains the key analytical queries, including the conditional logic and goal aggregation.
+* **`README.md`**: Project documentation.
+* **`assets/`**: Folder containing the Entity-Relationship Diagram (ERD) and Power BI chart screenshots.
+
+---
+
+## 6. Conclusions
+The World Cup data model demonstrates the ability to work with complex (N:M) relationships and conditional business logic directly in SQL. The queries and visualizations enable accurate performance analysis and automatic categorization of results, providing valuable, real-time information on the tournament's progress.
