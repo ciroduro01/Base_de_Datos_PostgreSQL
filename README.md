@@ -54,4 +54,4 @@ Si deseas ejecutar cualquiera de los proyectos, sigue estos pasos:
 
 ## Licencia
 
-Este trabajo se comparte bajo la **[Licencia MIT](LICENSE)**, lo que permite su uso y modificación con fines de estudio o portafolio.
+Este trabajo se comparte bajo la **[Licencia MIT](LICENSE)**, lo que permite su uso y modificación con fines de estudio o portafolio, **siempre y cuando se cite al autor original**.
