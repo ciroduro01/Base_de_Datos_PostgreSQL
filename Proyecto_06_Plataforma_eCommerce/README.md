@@ -74,3 +74,82 @@ El desarrollo del proyecto siguió un flujo de trabajo estructurado en las sigui
 El modelo de E-Commerce es un esquema relacional estándar y robusto que permite análisis vitales. El proyecto demuestra la capacidad de calcular **métricas de rentabilidad** y generar **alertas operacionales** directamente desde la base de datos, proporcionando las herramientas esenciales para optimizar el inventario y maximizar los ingresos del negocio.
 
 ---
+
+# Project 6: Database Modeling - E-Commerce Platform
+
+## 1. Objective and Project Overview
+
+This project aims to design and model a relational database for an e-commerce platform. The focus is on handling billing transactions (orders and details) and real-time inventory management.
+
+**Summary**: A relational schema was implemented using a link table (Many-to-Many) to manage the order and billing process. Key analytical SQL queries were developed to calculate profitability per product and to generate critical inventory alerts, which were visualized in Power BI.
+
+---
+
+## 2. Technologies and Tools Used
+
+| Category | Tool | Specific Use |
+| :--- | :--- | :--- |
+| **Databases** | PostgreSQL | Storage, DDL, DML, and SQL execution. |
+| **Modeling** | DBeaver | Design and generation of the Entity-Relationship Diagram (ERD). |
+| **Analysis** | (N:M JOINs, SUM, GROUP BY, Conditional Filtering) | Development of profitability and stock management queries. |
+| **Visualization** | Power BI | Creation of the Revenue Ranking and Critical Inventory Dashboard. |
+
+---
+
+## 3. Key Results and Visualizations
+
+### A. Data Model Design (ERD)
+
+The relational schema uses the classic billing (or Many-to-Many) pattern, where the `Pedido` and `Producto` tables are connected through the central `Detalle_Pedido` table (the invoice line), allowing for the management of multiple products per order.
+
+![E-Commerce Platform ERD diagram](assets/Proyecto6_ERD.png)
+
+### B. Key Analytical Queries
+
+The project focused on financial (profitability) and operational (inventory) metrics:
+
+1. **Revenue Ranking**: Use of `SUM` and `GROUP BY` on the `Detalle_Pedido` table to calculate the precise profitability of each product sold (`cantidad * precio_unitario`).
+2. **Inventory Alert**: Development of a simple but critical query for logistics, using `WHERE stock < 50` to identify products in critical stock that require urgent replenishment.
+3. **Billing Details**: A query that validates the N:M model by reconstructing the complete invoice for a specific order, combining `Cliente`, `Pedido`, and `Detalle_Pedido`.
+
+### C. Power BI Dashboard
+
+A dashboard was generated to visualize the analytical and operational results:
+
+* **Visualization 1**: Revenue Ranking: Total Accumulated Profitability per Product (Bar Chart).
+
+    ![Total Accumulated Profitability per Product chart](assets/Proyecto6_Ingresos_Rentabilidad.png)
+
+* **Visualization 2**: Products with Critical Stock (Less than 50 Units) (Column Chart).
+
+    ![Products with Critical Stock chart](assets/Proyecto6_Productos_Stock.png)
+
+* **Visualization 3**: Transactional Details of Order (Invoice) (Table).
+
+    ![Transactional Details of Order table](assets/Proyecto6_Factura_Pedido.png)
+
+---
+
+## 4. Work Methodology
+
+The project development followed a structured workflow in the following phases:
+
+1. **Phase 1: Modeling and DDL/DML**: Creation of the N:M relational schema, ensuring referential integrity and the correct insertion of customer, product, and transaction data (orders and details).
+2. **Phase 2: Analytical Queries (Advanced SQL)**: Development of key queries, emphasizing the use of aggregations (`SUM`) for accurate financial calculations and conditional filtering (`WHERE`) for inventory management.
+3. **Phase 3: BI Analysis**: Connection of Power BI to the three key queries and visualization of the metrics. A dashboard design was prioritized that provides both a high-level view (profitability) and operational alerts (stock).
+
+---
+
+## 5. Repository and File Structure
+
+* **`Proyecto N°6 - Base de Datos de Plataforma de E-Commerce.sql`**: Contains the `CREATE DATABASE` statement, the DDL (tables), and the DML (test data insertion).
+* **`Consultas_Clave_Proyecto6.sql`**: Contains the three key analytical queries (Profitability, Critical Inventory, Billing Details).
+* **`README.md`**: Project documentation.
+* **`assets/`**: Folder containing the Entity-Relationship Diagram (ERD) and Power BI chart screenshots.
+
+---
+
+## 6. Conclusions
+The E-Commerce model is a standard and robust relational schema that enables vital analysis. The project demonstrates the ability to calculate profitability metrics and generate operational alerts directly from the database, providing the essential tools to optimize inventory and maximize business revenue.
+
+---
