@@ -40,7 +40,7 @@ Si deseas ejecutar cualquiera de los proyectos, sigue estos pasos:
 
 1.  **Clonar el Repositorio:**
     ```bash
-    git clone [https://github.com/ciroduro01/Base_de_Datos_PostgreSQL.git](https://github.com/ciroduro01/Base_de_Datos_PostgreSQL.git)
+    git clone https://github.com/ciroduro01/Base_de_Datos_PostgreSQL.git
     ```
 
 2.  **Configuración de la Base de Datos:**
