@@ -74,3 +74,79 @@ El *dashboard* consolida las métricas clave para la operación del negocio, bas
 La base de datos relacional modelada permite un seguimiento robusto de las transacciones. El análisis de las consultas, especialmente el uso del mapa logístico, valida la capacidad del modelo para proporcionar **información accionable** (decisiones logísticas) para una empresa de movilidad moderna.
 
 ---
+
+# Project N°2: Transactional Database for Scooter Rentals
+
+## 1. Objective and Project Overview
+
+This project aims to design and model a relational database to manage the complete transactional cycle of electric scooter rentals. The system allows for customer registration, inventory management (scooter status and location), rental tracking, and logistical analysis.
+
+**Summary**: A relational schema was implemented for a mobility business (DDL/DML), complex foreign keys were defined (double relationship with Location), key analytical queries were created, and an interactive dashboard was generated in Power BI for logistical and operational analysis.
+
+---
+
+## 2. Technologies and Tools Used
+
+| Category | Tool | Specific Use |
+| :--- | :--- | :--- |
+| **Databases** | PostgreSQL | SQL storage and execution. |
+| **Modeling** | DBeaver | Entity-Relationship Diagram (ERD) design. |
+| **Analysis** | SQL (VIEW, JOINs, GROUP BY, HAVING) | Development of Key Analytical Queries. |
+| **Visualization** | Power BI | Creation of Inventory, Customer Ranking, and Logistics Dashboard. |
+
+---
+
+## 3. Key Results and Visualizations
+
+### A. Data Model Design (ERD)
+
+The schema uses a relational model centered on the `Alquiler` table, which manages transactions between entities. The use of foreign keys ensures referential integrity throughout the scooter workflow.
+
+* **Main Tables**:
+* `Cliente`: User information.
+* `Ubicacion`: Contains the geographic data (latitude, longitude) of the stations.
+* `Scooter`: Operational status (Available, Rented) and battery level.
+* `Alquiler`: Transaction record, linked twice to Location (pick-up and return).
+
+![Scooter Rentals Model ERD Diagram](assets/Proyecto2_ERD.png)
+
+### B. Business Intelligence Analysis (Power BI Dashboard)
+
+The dashboard consolidates key metrics for business operations, based on the analytical queries in `Consultas_Clave_Proyecto2.sql`:
+
+#### **Visualization 1: Operational Inventory Report**
+* **Approach**: Availability and Operations. It is based on the **`Scooters_Disponibles`** view (Query 1), filtering only for scooters ready to rent (`estado = 'DISPONIBLE' AND bateria_porcentaje > 70`).
+* **Visualization**: Real-time stock report table.
+    ![Operational Inventory Report](assets/Proyecto2_Inventario_Operacional.png)
+#### **Visualization 2: Customer Ranking by Total Rentals**
+* **Approach**: Customer Loyalty. It uses Query 3, applying `COUNT` and `GROUP BY` to generate a customer ranking based on their transactional activity.
+* **Visualization**: Horizontal bar chart classifying active customers.
+    ![Active Customers bar chart](assets/Proyecto2_Clientes_Alquileres.png)
+#### **Visualization 3: Returns Logistics Analysis**
+* **Approach**: Logistics and Geography. Use Query 4 and the `HAVING` command to identify the locations receiving the most returns. This information is critical for fleet redistribution.
+* **Visualization**: Geographic map with bubbles of varying sizes, where size represents `Total_Devoluciones_Recibidas`.
+    ![Total Returns geographical map](assets/Proyecto2_Mapa_Geográfico.png)
+
+---
+
+## 4. Project Procedure and Phases
+
+1. **Phase 1: Modeling and DDL/DML**: Creation of the schema with four tables and definition of primary and foreign keys. The two-way relationship between the `Alquiler` and `Ubicacion` tables is highlighted.
+2. **Phase 2: Analytical Queries (SQL)**: Development of key business queries: creation of a `VIEW` (Inventory), use of multiple `JOINs` (Transactional Report), aggregation with `GROUP BY` (Customer Ranking), and use of the `HAVING` clause to filter by aggregated metrics (Logistics).
+3. **Phase 3: BI Analysis**: Connection of Power BI to the database to generate the Dashboard, using the results of the analytical queries as data sources.
+
+---
+
+## 5. Repository and File Structure
+
+* **`Proyecto N°2 - Base de Datos Transaccional para Alquiler de Scooters.sql`**: Contains the `CREATE DATABASE` statement, the DDL (tables), and the DML (data insertion).
+* **`Consultas_Clave_Proyecto2.sql`**: Contains the key analytical queries.
+* **`README.md`**: Project documentation.
+* **`assets/`**: Folder containing the ERD diagram and the Power BI charts.
+
+---
+
+## 6. Conclusions
+The modeled relational database allows for robust transaction tracking. The analysis of the queries, especially the use of the logistics map, validates the model's ability to provide actionable information (logistical decisions) for a modern mobility company.
+
+---
