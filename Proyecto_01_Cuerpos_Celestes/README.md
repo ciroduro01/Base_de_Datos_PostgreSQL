@@ -39,9 +39,10 @@ El dashboard consolida tres visualizaciones clave basadas en consultas analític
 > 1.  ![Vista de Conteo por Galaxia](assets/Proyecto1_BI_Galaxia.png)
 > 2.  ![Vista de Conteo por Estrella](assets/Proyecto1_BI_Estrella.png)
 > 3.  ![Vista de Conteo por Planeta](assets/Proyecto1_BI_Planeta.png)
+
 #### **Gráfico 2: Reporte de Mundos Habitables**
 * **Enfoque:** Filtrado Lógico. Muestra la tabla de planetas que cumplen con el criterio `es_habitable = TRUE`. Demuestra la habilidad para extraer un reporte de estado clave para el negocio (el análisis de datos).
-* **Visualización:** Matriz o Tabla.
+* **Visualización:** Tabla.
     ![Tabla de Planetas con Atributo 'Habitable' TRUE](assets/Proyecto1_BI_Mundos_Habitables.png)
 
 #### **Gráfico 3: Distribución de Tipos de Planeta**
@@ -74,3 +75,85 @@ El dashboard consolida tres visualizaciones clave basadas en consultas analític
 ## 6. Conclusiones
 
 La base de datos relacional modelada permite un almacenamiento eficiente y jerárquico de la información astronómica. El análisis de las consultas valida el modelo, demostrando que es posible obtener métricas de valor (ej. el conteo de lunas por planeta) cruciales para cualquier proyecto científico de datos.
+
+---
+
+# Project N°1: Database Modeling - Celestial Bodies
+
+## 1. Objective and Project Overview
+
+This project aims to design and model a relational database to manage hierarchical information about galaxies, stars, planets, and moons.
+
+**Summary**: A normalized relational schema was implemented, data was loaded (DDL/DML), and analytical queries were performed and visualized in an interactive Business Intelligence dashboard (Power BI) to obtain the ranking of moons by planet, potential habitable world candidates, and the percentage distribution of planet types.
+
+---
+
+## 2. Technologies and Tools Used
+
+|Category | Tool | Specific Use |
+| :--- | :--- | :--- |
+| **Databases** | PostgreSQL | SQL storage and execution. |
+| **Modeling** | DBeaver | Entity-Relationship Diagram (ERD) design. | 
+| **Analysis** | SQL (JOINs, GROUP BY, COUNT) | Development of Key Analytical Queries. |
+| **Visualization** | Power BI | Creating a Dashboard for Moon Count, Habitable Worlds, and Planet Types. |
+
+---
+
+## 3. Key Results and Visualizations
+
+### A. Data Model Design (ERD)
+
+The schema uses a 1:N relational model that connects Galaxy -> Star -> Planet -> Moon.
+
+![Celestial Bodies Model ERD Diagram](assets/Proyecto1_ERD.png)
+
+### B. Business Intelligence Analysis (Power BI Dashboard)
+
+The dashboard consolidates three key visualizations based on analytical database queries:
+
+#### **Visualization 1: Moon Count Ranking**
+* **Approach**: Hierarchy and Aggregation. It determines the planet with the highest number of moons, demonstrating the ability to consolidate information across four tables (JOINs, COUNT, GROUP BY).
+* **Visualization**: Interactive bar chart.
+    ![Moon Count Ranking bar char (General View)](assets/Proyecto1_BI_Ranking_Final.png)
+> **Note**: The chart is interactive and allows hierarchical navigation (Drill Down). Three views have been included to demonstrate interactivity:
+> 1.  ![per Galaxy](assets/Proyecto1_BI_Galaxia.png)
+> 2.  ![per Star](assets/Proyecto1_BI_Estrella.png)
+> 3.  ![per Planet](assets/Proyecto1_BI_Planeta.png)
+
+#### **Visualization 2: Habitable Worlds Report**
+* **Approach**: Logical Filtering. Shows the table of planets that meet the criterion `es_habitable = TRUE`. Demonstrates the ability to extract a key business status report (data analysis).
+* **Visualization**: Table.
+    ![ 'Habitable' Planet Table](assets/Proyecto1_BI_Mundos_Habitables.png)
+
+#### **Visualization 3: Planet Type Distribution**
+* **Approach**: Categorical Distribution. Shows the proportion of different planet types (Gas Giant, Super-Earth, etc.). Demonstrates the ability to generate a composition metric from a categorical column.
+* **Visualization**: Donut Chart.
+    ![Planet Type Distribution donut chart](assets/Proyecto1_BI_Tipos_Planeta.png)
+
+---
+
+## 4. Project Procedure and Phases
+
+1. **Phase 1: Modeling and DDL/DML**: Creation of the schema with four tables (`Galaxy`, `Star`, `Planet`, `Moon`) and definition of primary and foreign keys to ensure referential integrity. The main script was used for data loading.
+2. **Phase 2: Analytical Queries (SQL)**: Development of key queries to meet business requirements, including:
+* **Hierarchical Analysis**: Use of `JOINs`, `COUNT`, and `GROUP BY` to obtain the ranking of moons by planet.
+* **Logical Filtering**: Use of the `WHERE` clause to identify habitable planets (`es_habitable = TRUE`).
+* **Distribution Analysis**: Use of `GROUP BY` to summarize the database composition by planet type.
+3. **Phase 3: BI Analysis**: Connection of Power BI to the database to generate the dashboard that visualizes the three analytical queries in a single report.
+
+---
+
+## 5. Repository Structure and Files
+
+* **`Proyecto N°1 - Base de Datos de Cuerpos Celestes.sql`**: Contains the `CREATE DATABASE` statement, the DDL (tables), and the DML (data insertion).
+* **`Consultas_Clave_Proyecto1.sql`**: Contains the key analytical queries.
+* **`README.md`**: Project documentation.
+* **`assets/`**: Folder containing all images (ERD and Power BI charts).
+
+---
+
+## 6. Conclusions
+
+The modeled relational database allows for efficient and hierarchical storage of astronomical information. The query analysis validates the model, demonstrating that it is possible to obtain valuable metrics (e.g., the number of moons per planet) crucial for any scientific data project.
+
+---
