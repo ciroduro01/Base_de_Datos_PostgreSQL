@@ -109,6 +109,21 @@ The projects are categorized to show a clear **learning progression** in schema 
 
 ---
 
+## Example Visualizations
+
+To illustrate our portfolio, we will show two charts from Project N°7 (Academic Management). The first one is a diagram created with **DBeaver**, while the second one is a bar chart created with **Power BI**.
+
+![Academic Management Model ERD Diagram](Proyecto_07_Gestion_Academica/assets/Proyecto7_ERD.png)
+
+
+As you can see in the diagram illustrated using **DBeaver**, this relational schema uses a central link table (`Inscripción`) that connects the `Estudiante` entity with the `Curso` entity. This link table stores the grades and final status, which is key for all performance analyses.
+
+![Course Ranking Historical Performance Bar Chart](Proyecto_07_Gestion_Academica/assets/Proyecto7_Nota_Promedio.png)
+
+Here we have a bar chart created in Power BI, titled **Course Ranking: Historical Performance (Average Grade)**. To create it, we used the *Average Course Grade* (Nota Promedio del Curso) (X-axis), the *Course Name* (Nombre del Curso) (Y-axis), and the *Course Name* as the legend, to add context and formatting to the chart.
+
+---
+
 ## How to Use This Repository
 
 If you want to run any of the projects, follow these steps:
