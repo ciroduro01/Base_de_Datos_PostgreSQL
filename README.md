@@ -1,4 +1,10 @@
 # 8 Proyectos de Modelado de Bases de Datos con PostgreSQL (Español)
+![Languages](https://img.shields.io/github/languages/top/ciroduro01/Base_de_Datos_PostgreSQL)
+![Commits](https://img.shields.io/github/commit-activity/m/ciroduro01/Base_de_Datos_PostgreSQL)
+![Repo size](https://img.shields.io/github/repo-size/ciroduro01/Base_de_Datos_PostgreSQL)
+![Last update](https://img.shields.io/github/last-commit/ciroduro01/Base_de_Datos_PostgreSQL)
+![License](https://img.shields.io/github/license/ciroduro01/Base_de_Datos_PostgreSQL)
+![Bilingual](https://img.shields.io/badge/Docs-Bilingual-green)
 
 ## Resumen del Repositorio
 
