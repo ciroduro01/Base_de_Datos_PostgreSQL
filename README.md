@@ -14,23 +14,24 @@ Los proyectos están categorizados para mostrar una clara **progresión de apren
 
 | Proyectos | Enfoque |
 | :--- | :--- |
-| **P. N°1** | Primer contacto con `CREATE TABLE` y `JOINs` (Cuerpos Celestes). |
-| **P. N°3** | Modelado de restricciones de tiempo y uso de `CHECK` (Planificador de Citas). |
+| **P. N°1 - Cuerpos Celestes** | Primer contacto con `CREATE TABLE` y `JOINs`. |
+| **P. N°2 - Alquiler de Scooters** | Ciclo Transaccional, uso de `COUNT BY` y `HAVING`. |
+| **P. N°3 - Planificador de Citas** | Modelado de restricciones de tiempo y uso de `CHECK`. |
 
 ### Nivel Intermedio: Tablas N:M y Lógica de Negocio
 
 | Proyectos | Enfoque |
 | :--- | :--- |
-| **P. N°4** | Manejo de **lógica de fechas** y reservas (Agencia de Viajes). |
-| **P. N°5** | **Relaciones N:M complejas** y agregaciones condicionales (`CASE WHEN`) (Copa del Mundo). |
-| **P. N°6** | Modelo de **Transacciones/Facturación** (E-Commerce). |
+| **P. N°4 - Agencia de Viajes** | Manejo de **lógica de fechas** y reservas. |
+| **P. N°5 - Copa del Mundo** | **Relaciones N:M complejas** y agregaciones condicionales (`CASE WHEN`). |
+| **P. N°6 - Plataforma de E-Commerce** | Modelo de **Transacciones/Facturación**. |
 
 ### Nivel Avanzado: Análisis de Datos (BI) y Alto Rendimiento
 
 | Proyectos | Enfoque Técnico |
 | :--- | :--- |
-| **P. N°7** | Esquema de **Gestión Académica** con cálculos de rendimiento (`AVG` con `GROUP BY`). |
-| **P. N°8** | Modelo para **Sistema de Recomendación** (Afinidad y Popularidad), clave para el análisis en Power BI. |
+| **P. N°7 - Gestión Académica** | Esquema de **Gestión Académica** con cálculos de rendimiento (`AVG` con `GROUP BY`). |
+| **P. N°8 - Sistema de Recomendación de Contenido** | Modelo para **Sistema de Recomendación** (Afinidad y Popularidad), clave para el análisis en Power BI. |
 
 ---
 
@@ -74,23 +75,24 @@ The projects are categorized to show a clear **learning progression** in schema 
 
 | Projects | Focus |
 | :--- | :--- |
-| **P. 1** | First contact with `CREATE TABLE` and `JOINs`(Celestial Bodies). |
-| **P. 3** | Modeling time constraints and using `CHECK` (Appointment Scheduler). |
+| **P. 1 - Celestial Bodies** | First contact with `CREATE TABLE` and `JOINs`. |
+| **P. 2 - Scooter Rental** | Transaction Model, use of `COUNT BY` and `HAVING` |
+| **P. 3 - Appointment Scheduler** | Modeling time constraints and using `CHECK`. |
 
 ### Intermediate Level: N:M Tables and Business Logic
 
 | Projects | Focus |
 | :--- | :--- |
-| **P. 4** | Date and Reservation Logic Management (Travel Agency). |
-| **P. 5** | **Complex N:M Relationships** and Conditional Aggregations (`CASE WHEN`) (World Cup). |
-| **P. 6** | Transaction/Billing Model (E-Commerce). |
+| **P. 4 - Travel Agency** | Date and Reservation Logic Management. |
+| **P. 5 - World Cup** | **Complex N:M Relationships** and Conditional Aggregations (`CASE WHEN`). |
+| **P. 6 - E-Commerce Platform** | Transaction/Billing Model. |
 
 ### Advanced Level: Data Analysis (BI) and High Performance
 
 | Projects | Focus |
 | :--- | :--- |
-| **P. 7** | Academic Management Scheme with Performance Calculations (`AVG` with `GROUP BY`). |
-| **P. 8** | Recommendation System Model (Affinity and Popularity), key for analysis in Power BI. |
+| **P. 7 - Academic Management Scheme** | Performance Calculations (`AVG` with `GROUP BY`). |
+| **P. 8 - Recommendation System Model** | Affinity and Popularity, key for analysis in Power BI. |
 
 ---
 
