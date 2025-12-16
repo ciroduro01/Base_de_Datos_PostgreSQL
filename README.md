@@ -1,4 +1,4 @@
-# 8 Proyectos de Modelado de Bases de Datos con PostgreSQL
+# 8 Proyectos de Modelado de Bases de Datos con PostgreSQL (Español)
 
 ## Resumen del Repositorio
 
@@ -72,7 +72,7 @@ Este trabajo se comparte bajo la **[Licencia MIT](LICENSE)**, lo que permite su 
 
 ---
 
-# 8 Database Modeling Projects with PostgreSQL
+# 8 Database Modeling Projects with PostgreSQL (English)
 
 ## Repository Overview
 
