@@ -34,6 +34,15 @@ Los proyectos están categorizados para mostrar una clara **progresión de apren
 | **P. N°8 - Sistema de Recomendación de Contenido** | Modelo para **Sistema de Recomendación** (Afinidad y Popularidad), clave para el análisis en Power BI. |
 
 ---
+## Visualizaciones de Ejemplo
+
+Para ejemplificar nuestro portafolio, mostraremos aquí dos gráficos pertenecientes al Proyecto N°7 (Gestión Académica). El primero es el diagrama realizado con **DBeaver**, mientras que el segundo es un gráfico de barras realizado con **Power BI**.
+
+Como puede verse en el Diagrama realizado en **DBeaver**, este esquema relacional utiliza una tabla de enlace central (`Inscripción`) que conecta la entidad `Estudiante` con la entidad `Curso`. Esta tabla de enlace almacena las calificaciones y el estado final, lo cual es la clave para todos los análisis de rendimiento.
+
+Aquí tenemos un gráfico de barras realizado en **Power BI**, titulado **Ranking de Cursos: Rendimiento Histórico (Nota Promedio)**. Para realizarlo, se tomaron la *Nota Promedio del Curso* (Eje X), el *Nombre del Curso* (Eje Y), y como leyenda también se utilizó el *Nombre del Curso*, para añadirle contexto y formato al gráfico.
+
+---
 
 ## Cómo Usar Este Repositorio
 
