@@ -38,7 +38,11 @@ Los proyectos están categorizados para mostrar una clara **progresión de apren
 
 Para ejemplificar nuestro portafolio, mostraremos aquí dos gráficos pertenecientes al Proyecto N°7 (Gestión Académica). El primero es el diagrama realizado con **DBeaver**, mientras que el segundo es un gráfico de barras realizado con **Power BI**.
 
+![Diagrama Entidad-Relación (ERD) del Modelo Gestión Académica](Proyecto_07_Gestion_Academica/assets/Proyecto7_ERD.png)
+
 Como puede verse en el Diagrama realizado en **DBeaver**, este esquema relacional utiliza una tabla de enlace central (`Inscripción`) que conecta la entidad `Estudiante` con la entidad `Curso`. Esta tabla de enlace almacena las calificaciones y el estado final, lo cual es la clave para todos los análisis de rendimiento.
+
+![Gráfico de Barras del Ranking de Cursos (Promedio por Curso)](Proyecto_07_Gestion_Academica/assets/Proyecto7_Nota_Promedio.png)
 
 Aquí tenemos un gráfico de barras realizado en **Power BI**, titulado **Ranking de Cursos: Rendimiento Histórico (Nota Promedio)**. Para realizarlo, se tomaron la *Nota Promedio del Curso* (Eje X), el *Nombre del Curso* (Eje Y), y como leyenda también se utilizó el *Nombre del Curso*, para añadirle contexto y formato al gráfico.
 
